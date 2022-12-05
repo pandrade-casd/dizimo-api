@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
         {
-            "src": "./app/bin/www",
+            "src": "bin/www",
             "use": "@now/node"
         }
     ]
