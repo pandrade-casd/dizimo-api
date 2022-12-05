@@ -1,0 +1,29 @@
+{
+  "name": "app",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./app/bin/www",
+    "nodemon": "nodemon ./app/bin/www"
+  },
+  "dependencies": {
+    "axios": "^1.2.0",
+    "bcryptjs": "^2.4.3",
+    "config": "^3.0.1",
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
+    "express": "~4.16.0",
+    "express-jwt": "^7.7.7",
+    "express-validation": "^1.0.2",
+    "express-validator": "^6.14.2",
+    "joi": "^14.3.1",
+    "jsonwebtoken": "^8.5.0",
+    "mongoose": "^5.4.20",
+    "mongoose-autopopulate": "^0.12.2",
+    "morgan": "~1.9.0",
+    "node-thermal-printer": "^4.1.2",
+    "serialport": "^9.0.7"
+  }
+}
