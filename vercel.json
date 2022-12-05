@@ -3,14 +3,14 @@
     "name": "dizimo-api",
     "builds": [
         {
-            "src": "app/bin/www",
+            "src": "app/bin/www.js",
             "use": "@vercel/node"
         }
     ],
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "app/bin/www"
+            "dest": "app/bin/www.js"
         }
     ]
 }
