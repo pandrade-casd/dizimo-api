@@ -1,13 +1,14 @@
-FROM node:12.18.1
+FROM node:16
 ENV NODE_ENV=production
 
 WORKDIR /app
 
-COPY ["package.json", "package-lock.json*", "./"]
+COPY ["package.json", "package-lock.json*", "."]
 
 RUN npm install --production
 
-COPY . .
+COPY src .
 
-CMD [ "npm", "run", "start"]
-EXPOSE 3000
+ENTRYPOINT [ "node", "bin/www"]
+
+EXPOSE 8080
