@@ -8,7 +8,7 @@ function auth(req, res, next) {
         next({ message: "Deu ruim, sem o token", status_code: 401 })
     } else {
         try {
-            const decoded = jwt.verify(token, process.env.JWT_SECRET)
+            const decoded = jwt.verify(token, process.env.JWTSECRET)
 
             req.user = decoded
             next()
