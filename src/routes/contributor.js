@@ -8,27 +8,27 @@ const auth = require("../middleware/auth");
 
 const contributorCtrl = require("../controllers/contributorController");
 
-router.get("/", auth, contributorCtrl.getAll);
+router.get("/", contributorCtrl.getAll);
 
 // router.get("/:actives", contributorCtrl.getActives);
 
-router.get("/:id", auth, contributorCtrl.get);
+router.get("/:id", contributorCtrl.get);
 
-router.post("/", auth, contributorCtrl.create);
+router.post("/", contributorCtrl.create);
 
-router.post("/:id", auth, contributorCtrl.update);
+router.post("/:id", contributorCtrl.update);
 
 router.delete("/:id", auth, contributorCtrl.remove);
 
-router.get("/:id/contribution", auth, contributorCtrl.contributions);
+router.get("/:id/contribution", contributorCtrl.contributions);
 
-router.post("/:id/contribution", auth, contributorCtrl.addContribution);
+router.post("/:id/contribution", contributorCtrl.addContribution);
 
-router.post("/:id/contribution/:id_contrib", auth, contributorCtrl.updateContribution);
+router.post("/:id/contribution/:id_contrib", contributorCtrl.updateContribution);
 
-router.delete("/:id/contribution/:id_contrib", auth, contributorCtrl.removeContribution);
+router.delete("/:id/contribution/:id_contrib", contributorCtrl.removeContribution);
 
-router.post("/:id/child", auth, contributorCtrl.addChild);
+router.post("/:id/child", contributorCtrl.addChild);
 
 //router.param('id', contributorCtrl.load);
 
