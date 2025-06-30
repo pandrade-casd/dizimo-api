@@ -48,7 +48,7 @@ let corsOptions = {
   preflightContinue: true
 }
 app.use(cors(corsOptions))
-
+app.options('*', cors(corsOptions)); 
 // app.use(cors({
 //   "origin": "*",
 //   "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
